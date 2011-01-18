@@ -50,6 +50,9 @@ class Url
                               	
               	foreach ($value as $subValue)
                 {
+                	// skip if empty
+                	if (!(is_string($subValue) || is_numeric($subValue))) continue;
+                	
               	  $query .= '/' . $key . '/' . rawurlencode($subValue);
                 }
               }
