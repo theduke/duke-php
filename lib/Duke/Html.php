@@ -42,7 +42,7 @@ EOL;
 		
 		$content = '';
 		
-		if ($addEmpty) $content .= self::tag_option('', '', null);
+		if ($addEmpty) $content .= self::tag_option('', is_string($addEmpty) ? $addEmpty : '', null);
 		
 		$i = 0;
 		foreach ($options as $key => $value)
