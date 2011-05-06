@@ -23,7 +23,7 @@ class Reflection
 			
 			foreach ($constants as $key => $value)
 			{
-				if (strpos($key, $pattern) !== -1)
+				if (strpos($key, $pattern) !== false)
 				{
 					$final[$key] = $value;
 				}
